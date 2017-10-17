@@ -1,7 +1,7 @@
 ﻿/* 代码整理：懒人之家 www.lanrenzhijia.com */
 	
 	var html5webPiano = {};
-	
+
 	html5webPiano.isMSIE = /*@cc_on!@*/false; 
 	html5webPiano.START_NOTE_NUMBER = 60;
 	html5webPiano.END_NOTE_NUMBER = 72;
@@ -29,6 +29,8 @@
 				setKeyAttachEvent(i);
 			}
 		}
+
+
 	}
 	
 	//设置声音文件
@@ -42,20 +44,21 @@
 	
 	//设定钢琴键的点击事件(EventListener版)
 	function setKeyEventListener(noteNumber){
-		var keyId = 'key' + noteNumber;
+		var keyId = 'k' + noteNumber;
 		var key = document.getElementById(keyId);
 		if(key){
-			key.style.left = getPosition(noteNumber) + 'px';
+			//key.style.left = getPosition(noteNumber) + 'px';
+			key.onclick = function(){playSound(noteNumber)};
 			key.addEventListener('click', keyClick, false);
 		}
 	}
 	
 	//设定钢琴键的点击事件(AttachEvent版)
 	function setKeyAttachEvent(noteNumber){
-		var keyId = 'key' + noteNumber;
+		var keyId = 'k' + noteNumber;
 		var key = document.getElementById(keyId);
 		if(key){
-			key.style.left = getPosition(noteNumber) + 'px';
+			//key.style.left = getPosition(noteNumber) + 'px';
 			key.attachEvent('onclick', keyClick);
 		}
 	}
