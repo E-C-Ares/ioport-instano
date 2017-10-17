@@ -1,9 +1,9 @@
 /*
-* Piano Keyboard 
-* Author: Luiz Felipe Tartarotti Fialho
-* @LFeh / luizfelipe.tf.13@gmail.com
-* http://www.felipefialho.com/
+* instano.css
+* Author: E.C.Ares
+* https://e-c-ares.github.io/
 */
+
 * {
   box-sizing: border-box;
   border: 0;
@@ -17,13 +17,7 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
-@font-face {
-  font-family: 'piano-keyboard';
-  src: url('icons/piano-keyboard.eot?nfc6q9');
-  src: url('icons/piano-keyboard.eot?#iefixnfc6q9') format('embedded-opentype'), url('icons/piano-keyboard.woff?nfc6q9') format('woff'), url('icons/piano-keyboard.ttf?nfc6q9') format('truetype'), url('icons/piano-keyboard.svg?nfc6q9#piano-keyboard') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: 'piano-keyboard';
