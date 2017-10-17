@@ -48,8 +48,9 @@
 		var key = document.getElementById(keyId);
 		if(key){
 			//key.style.left = getPosition(noteNumber) + 'px';
-			key.onclick = function(){playSound(noteNumber)};
+			//key.onclick = function(){playSound(noteNumber)};
 			key.addEventListener('click', keyClick, false);
+            key.addEventListener('mousedown', keyClick, false);
 		}
 	}
 	
@@ -76,14 +77,14 @@
 	//按下钢琴键时
 	function keyClick(){
 		var that = this;
-		var noteNumber = that.id.replace('key','');
+		var noteNumber = that.id.replace('k','');
 		playSound(noteNumber);
 	}
 	
 	//指定发出的声音
 	function playSound(noteNumber){
 		var soundId = 'sound' + noteNumber;
-		var keyId = 'key' + noteNumber;
+		var keyId = 'k' + noteNumber;
 		var key = document.getElementById(keyId);
 		var audio = null;
 		
@@ -101,7 +102,7 @@
 	
 	//返回原来的钢琴键颜色
 	function setOriginColor(noteNumber){
-		var keyId = 'key' + noteNumber;
+		var keyId = 'k' + noteNumber;
 		var key = document.getElementById(keyId);
 		var offset = noteNumber % 12;
 		if(key){
